@@ -1,5 +1,14 @@
 package xyz.dddd.algorithm.lesson;
 
+
+/**
+ * <h1>Catalan number algorithm</h1>
+ * <ul>
+ *   <li>
+ *     <a href="https://namu.wiki/w/%EC%B9%B4%ED%83%88%EB%9E%91%20%EC%88%98?from=%EC%B9%B4%ED%83%88%EB%9E%80%20%EC%88%98">Wiki</a>
+ *   </li>
+ * </ul>
+ */
 public class NumberOfCorrectParentheses {
 
   private NumberOfCorrectParentheses() {
