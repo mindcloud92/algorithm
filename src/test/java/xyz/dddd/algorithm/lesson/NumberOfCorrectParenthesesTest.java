@@ -7,7 +7,7 @@ import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class CorrectParenthesesTest {
+public class NumberOfCorrectParenthesesTest {
 
   private static final Map<Integer, Integer> EXPECTED_MAP = Map.of(
       2, 2,
@@ -16,18 +16,18 @@ public class CorrectParenthesesTest {
       14, 2674440
   );
 
-  private static CorrectParentheses correctParentheses;
+  private static NumberOfCorrectParentheses numberOfCorrectParentheses;
 
   @BeforeAll
   public static void setUp() {
-    correctParentheses = new CorrectParentheses();
+    numberOfCorrectParentheses = new NumberOfCorrectParentheses();
   }
 
   @Test
   public void givenRandomPairCountWhenCountThen() {
     int pairCount = randomPairCount();
 
-    int actual = correctParentheses.count(pairCount);
+    int actual = numberOfCorrectParentheses.count(pairCount);
 
     int expected = EXPECTED_MAP.get(pairCount);
     assertEquals(expected, actual);
