@@ -24,10 +24,10 @@ public class CorrectParenthesesTest {
   }
 
   @Test
-  public void givenPairCountsWhenCountThen() {
+  public void givenRandomPairCountWhenCountThen() {
     int pairCount = randomPairCount();
 
-    int actual = correctParentheses.maxCount(pairCount);
+    int actual = correctParentheses.count(pairCount);
 
     int expected = EXPECTED_MAP.get(pairCount);
     assertEquals(expected, actual);

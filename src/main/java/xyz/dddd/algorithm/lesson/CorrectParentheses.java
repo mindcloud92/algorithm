@@ -9,13 +9,9 @@ package xyz.dddd.algorithm.lesson;
  *   </li>
  * </ul>
  */
-public class NumberOfCorrectParentheses {
+public class CorrectParentheses {
 
-  private NumberOfCorrectParentheses() {
-    throw new UnsupportedOperationException();
-  }
-
-  public static int count(final int pairCount) {
+  public int count(final int pairCount) {
     if (pairCount <= 1) {
       return 1;
     }
