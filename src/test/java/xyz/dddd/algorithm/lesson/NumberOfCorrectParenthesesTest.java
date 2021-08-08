@@ -3,7 +3,7 @@ package xyz.dddd.algorithm.lesson;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import java.util.Map;
+import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -34,12 +34,13 @@ public class NumberOfCorrectParenthesesTest {
   }
 
   private int randomPairCount() {
-    int key = (int) (Math.random() * 13) + 2;
-    if (EXPECTED_MAP.containsKey(key)) {
-      return key;
+    Set<Integer> keySet = EXPECTED_MAP.keySet();
+    if (keySet.isEmpty()) {
+      return 0;
     }
 
-    return randomPairCount();
+    List<Integer> keys = new ArrayList<>(keySet);
+    return keys.get(new Random().nextInt(keys.size()));
   }
 
 }
