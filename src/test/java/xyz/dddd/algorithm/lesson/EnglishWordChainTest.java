@@ -17,7 +17,7 @@ public class EnglishWordChainTest {
   @Test
   public void givenWordsAndPeopleCountWhenFindFirstOutInfoThen() {
     int peopleCount = 3;
-    String[] words = new String[]{"tank", "kick", "know", "wheel", "land", "dream", "mother", "robot", "tank"};
+    String[] words = {"tank", "kick", "know", "wheel", "land", "dream", "mother", "robot", "tank"};
 
     int[] actual = englishWordChain.findFirstOutInfo(peopleCount, words);
 

@@ -16,11 +16,11 @@ public class StockPriceTest {
 
   @Test
   public void givenPricePerSecondsWhenCountMaintainedSecondsThen() {
-    int[] prices = new int[]{1, 2, 3, 2, 3};
+    int[] prices = {1, 2, 3, 2, 3};
 
     int[] actual = stockPrice.countMaintainedSeconds(prices);
 
-    int[] expected = new int[]{4, 3, 1, 1, 0};
+    int[] expected = {4, 3, 1, 1, 0};
     assertArrayEquals(expected, actual);
   }
 }
