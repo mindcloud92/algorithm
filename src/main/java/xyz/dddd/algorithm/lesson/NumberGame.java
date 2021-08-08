@@ -17,7 +17,7 @@ public class NumberGame {
     Arrays.sort(lastTeam);
 
     int winnerCount = 0;
-    for (int i = firstTeam.length - 1, li = firstTeam.length - 1; i >= 0; i--) {
+    for (int i = firstTeam.length - 1, li = lastTeam.length - 1; i >= 0; i--) {
       if (firstTeam[i] < lastTeam[li]) {
         winnerCount++;
         li--;
