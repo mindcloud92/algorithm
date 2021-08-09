@@ -2,13 +2,32 @@ package xyz.dddd.algorithm.lesson;
 
 public class NextBigNumber {
 
-  public int find(final int decimalNumber) {
-    String binaryString = Integer.toBinaryString(decimalNumber);
+  public int than(final int decimalNumber) {
+    int criteriaOneCount = countOneBinaryString(decimalNumber);
 
-    // 맨앞에 있는 1 말고 다 뒤로 보내
-    // 뒤로 보냈는데 지금 숫자보다 작으면 클때까지 돌려야댐
+    int nextNumber = decimalNumber;
+    while (true) {
+      if (criteriaOneCount == countOneBinaryString(++nextNumber)) {
+        break;
+      }
+    }
 
-    return 0;
+    return nextNumber;
+  }
+
+  private int countOneBinaryString(final int decimalNumber) {
+    int n = decimalNumber;
+
+    int count = 0;
+    while (n > 0) {
+      if (n % 2 == 1) {
+        count++;
+      }
+
+      n /= 2;
+    }
+
+    return count;
   }
 
 }

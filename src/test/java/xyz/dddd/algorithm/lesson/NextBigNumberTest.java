@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class NextBigNumberTest {
 
   private static final Map<Integer, Integer> EXPECTED_MAP = Map.of(
-      78, 82,
+      78, 83,
       15, 23
   );
 
@@ -25,7 +25,7 @@ public class NextBigNumberTest {
   public void givenRandomDecimalNumberWhenFindThen() {
     int decimalNumber = randomDecimalNumber();
 
-    int actual = nextBigNumber.find(decimalNumber);
+    int actual = nextBigNumber.than(decimalNumber);
 
     int expected = EXPECTED_MAP.get(decimalNumber);
     assertEquals(expected, actual);
