@@ -1,59 +1,53 @@
 package xyz.dddd.algorithm.lesson.lyrics;
 
-import java.util.TreeSet;
+import java.util.HashMap;
+import java.util.Map;
 
 public class LyricsSearch {
 
   private static final String WILDCARD = "?";
 
   public int matches(final String[] words, final String pattern) {
-    Trie[] tries = createWordTrieArray(words);
+    Map<Integer, Trie> trieMap = createWordTrieMap(words);
 
-    int rootIndex = pattern.length() - 1;
-    return tries[rootIndex].matches(pattern, WILDCARD);
+    Trie matchedTrie = trieMap.get(pattern.length());
+    if (matchedTrie == null) {
+      return 0;
+    }
+
+    return matchedTrie.matches(pattern, WILDCARD);
   }
 
   public int[] matches(final String[] words, final String[] patterns) {
-    Trie[] tries = createWordTrieArray(words);
+    Map<Integer, Trie> trieMap = createWordTrieMap(words);
 
     int[] result = new int[patterns.length];
     for (int i = 0; i < patterns.length; i++) {
       String pattern = patterns[i];
 
-      int rootIndex = pattern.length() - 1;
-      if (rootIndex > tries.length - 1 || tries[rootIndex] == null) {
+      Trie matchedTrie = trieMap.get(pattern.length());
+      if (matchedTrie == null) {
         continue;
       }
 
-      result[i] = tries[rootIndex].matches(pattern, WILDCARD);
+      result[i] = matchedTrie.matches(pattern, WILDCARD);
     }
 
     return result;
   }
 
-  private Trie[] createWordTrieArray(final String[] words) {
-    int size = getLongestWordLength(words);
-
-    Trie[] tries = new Trie[size];
+  private Map<Integer, Trie> createWordTrieMap(final String[] words) {
+    Map<Integer, Trie> trieMap = new HashMap<>();
     for (String word : words) {
-      int index = word.length() - 1;
-      if (tries[index] == null) {
-        tries[index] = new Trie();
-      }
+      int key = word.length();
 
-      tries[index].insert(word);
+      Trie trie = trieMap.getOrDefault(key, new Trie());
+      trie.insert(word);
+
+      trieMap.put(key, trie);
     }
 
-    return tries;
-  }
-
-  private int getLongestWordLength(final String[] words) {
-    TreeSet<Integer> set = new TreeSet<>();
-    for (String s : words) {
-      set.add(s.length());
-    }
-
-    return set.last();
+    return trieMap;
   }
 
 }

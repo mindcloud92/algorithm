@@ -39,7 +39,7 @@ public class LyricsSearchTest {
   }
 
   @Test
-  public void givenMultipleWordAndMixedPatternWhenMatchThen() {
+  public void givenMultipleWordAndMixPatternWhenMatchThen() {
     String[] words = {"frodo", "front", "frost", "frozen", "frame", "kakao", "foo"};
     String[] patterns = {"fro??", "????o", "fr???", "fro???", "pro?", "???"};
 
