@@ -10,12 +10,7 @@ public class LyricsSearch {
   public int matches(final String[] words, final String pattern) {
     Map<Integer, Trie> trieMap = createWordTrieMap(words);
 
-    Trie matchedTrie = trieMap.get(pattern.length());
-    if (matchedTrie == null) {
-      return 0;
-    }
-
-    return matchedTrie.matches(pattern, WILDCARD);
+    return this.matches(trieMap, pattern);
   }
 
   public int[] matches(final String[] words, final String[] patterns) {
@@ -23,17 +18,19 @@ public class LyricsSearch {
 
     int[] result = new int[patterns.length];
     for (int i = 0; i < patterns.length; i++) {
-      String pattern = patterns[i];
-
-      Trie matchedTrie = trieMap.get(pattern.length());
-      if (matchedTrie == null) {
-        continue;
-      }
-
-      result[i] = matchedTrie.matches(pattern, WILDCARD);
+      result[i] = this.matches(trieMap, patterns[i]);
     }
 
     return result;
+  }
+
+  private int matches(final Map<Integer, Trie> trieMap, final String pattern) {
+    Trie matchedTrie = trieMap.get(pattern.length());
+    if (matchedTrie == null) {
+      return 0;
+    }
+
+    return matchedTrie.matches(pattern, WILDCARD);
   }
 
   private Map<Integer, Trie> createWordTrieMap(final String[] words) {
