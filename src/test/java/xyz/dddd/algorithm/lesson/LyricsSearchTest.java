@@ -2,6 +2,7 @@ package xyz.dddd.algorithm.lesson;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import xyz.dddd.algorithm.lesson.lyrics.LyricsSearch;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -16,46 +17,35 @@ public class LyricsSearchTest {
   }
 
   @Test
-  public void givenWordAndSuffixPatternWhenMatchThen() {
-    String word = "frodo";
-    String pattern = "fro??";
-
-    boolean actual = lyricsSearch.isMatch(word, pattern);
-
-    boolean expected = true;
-    assertEquals(expected, actual);
-  }
-
-  @Test
-  public void givenWordAndPrefixPatternWhenMatchThen() {
-    String word = "frodo";
-    String pattern = "????o";
-
-    boolean actual = lyricsSearch.isMatch(word, pattern);
-
-    boolean expected = true;
-    assertEquals(expected, actual);
-  }
-
-  @Test
-  public void givenMultipleWordAndPatternWhenMatchThen() {
+  public void givenMultipleWordAndPrefixPatternWhenMatchThen() {
     String[] words = {"frodo", "front", "frost", "frozen", "frame", "kakao"};
     String pattern = "fro??";
 
-    int actual = lyricsSearch.match(words, pattern);
+    int actual = lyricsSearch.matches(words, pattern);
 
     int expected = 3;
     assertEquals(expected, actual);
   }
 
   @Test
-  public void givenMultipleWordAndMultiplePatternWhenMatchThen() {
-    String[] words = {"frodo", "front", "frost", "frozen", "frame", "kakao"};
-    String[] patterns = {"fro??", "????o", "fr???", "fro???", "pro?"};
+  public void givenMultipleWordAndSuffixPatternWhenMatchThen() {
+    String[] words = {"frodo", "front", "frost", "frozen", "frame", "kakao", "foo"};
+    String pattern = "????o";
+
+    int actual = lyricsSearch.matches(words, pattern);
+
+    int expected = 2;
+    assertEquals(expected, actual);
+  }
+
+  @Test
+  public void givenMultipleWordAndMixedPatternWhenMatchThen() {
+    String[] words = {"frodo", "front", "frost", "frozen", "frame", "kakao", "foo"};
+    String[] patterns = {"fro??", "????o", "fr???", "fro???", "pro?", "???"};
 
     int[] actual = lyricsSearch.matches(words, patterns);
 
-    int[] expected = {3, 2, 4, 1, 0};
+    int[] expected = {3, 2, 4, 1, 0, 1};
     assertArrayEquals(expected, actual);
   }
 
