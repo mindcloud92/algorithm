@@ -2,7 +2,6 @@ package xyz.dddd.algorithm.lesson.basis;
 
 public class Math {
 
-
   public Math() {
     throw new UnsupportedOperationException();
   }
@@ -77,7 +76,7 @@ public class Math {
   }
 
   /**
-   * @see "가우스 덧셈"
+   * <a href="https://sgcomputer.tistory.com/272">@link 가우스 덧셈</a>
    */
   public static int sumByGauss(final int continuousNumberCount) {
     int sum = (1 + continuousNumberCount) * (continuousNumberCount / 2);
