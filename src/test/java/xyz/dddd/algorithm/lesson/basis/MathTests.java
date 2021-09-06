@@ -7,6 +7,37 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class MathTests {
 
   @Test
+  public void givenContinuousNumberCountWhenSumByGaussThen() {
+    int continuousNumberCount = 7;
+
+    int actual = Math.sumByGauss(continuousNumberCount);
+
+    int expected = 28;
+    assertEquals(expected, actual);
+  }
+
+  @Test
+  public void givenNumberRangeWhenSumThen() {
+    int start = 2;
+    int end = 10;
+
+    int actual = Math.sum(start, end);
+
+    int expected = 54;
+    assertEquals(expected, actual);
+  }
+
+  @Test
+  public void givenContinuousNumberCountWhenSumThen() {
+    int continuousNumberCount = 7;
+
+    int actual = Math.sum(continuousNumberCount);
+
+    int expected = 28;
+    assertEquals(expected, actual);
+  }
+
+  @Test
   public void givenThreeNumberWhenMaxThen() {
     int a = 1;
     int b = 3;

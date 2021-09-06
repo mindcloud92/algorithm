@@ -2,6 +2,7 @@ package xyz.dddd.algorithm.lesson.basis;
 
 public class Math {
 
+
   public Math() {
     throw new UnsupportedOperationException();
   }
@@ -59,5 +60,33 @@ public class Math {
     }
 
     return a > c ? a : java.lang.Math.min(c, b);
+  }
+
+  public static int sum(final int continuousNumberCount) {
+    return sum(1, continuousNumberCount);
+  }
+
+  public static int sum(final int start, final int end) {
+    int sum = 0;
+
+    for (int i = start; i <= end; i++) {
+      sum += i;
+    }
+
+    return sum;
+  }
+
+  /**
+   * @see "가우스 덧셈"
+   */
+  public static int sumByGauss(final int continuousNumberCount) {
+    int sum = (1 + continuousNumberCount) * (continuousNumberCount / 2);
+
+    boolean isEven = continuousNumberCount % 2 == 0;
+    if (!isEven) {
+      sum += (1 + continuousNumberCount) / 2;
+    }
+
+    return sum;
   }
 }
