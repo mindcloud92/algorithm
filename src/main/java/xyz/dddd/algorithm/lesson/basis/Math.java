@@ -7,47 +7,29 @@ public class Math {
   }
 
   public static int max(final int a, final int b, final int c, final int d) {
-    int max = a;
-    if (b > max) {
-      max = b;
-    }
-
-    return Math.max(max, c, d);
+    return Math.max(max(a, b), c, d);
   }
 
   public static int max(final int a, final int b, final int c) {
-    int max = a;
-    if (b > max) {
-      max = b;
-    }
+    return max(max(a, b), c);
+  }
 
-    if (c > max) {
-      max = c;
-    }
-
-    return max;
+  @SuppressWarnings("ManualMinMaxCalculation")
+  public static int max(final int a, final int b) {
+    return a > b ? a : b;
   }
 
   public static int min(final int a, final int b, final int c, final int d) {
-    int min = a;
-    if (b < min) {
-      min = b;
-    }
-
-    return Math.min(min, c, d);
+    return Math.min(min(a, b), c, d);
   }
 
   public static int min(final int a, final int b, final int c) {
-    int min = a;
-    if (b < min) {
-      min = b;
-    }
+    return min(min(a, b), c);
+  }
 
-    if (c < min) {
-      min = c;
-    }
-
-    return min;
+  @SuppressWarnings("ManualMinMaxCalculation")
+  public static int min(final int a, final int b) {
+    return a > b ? b : a;
   }
 
   /**
@@ -55,10 +37,10 @@ public class Math {
    */
   public static int mid(final int a, final int b, final int c) {
     if (a >= b) {
-      return b >= c ? b : java.lang.Math.min(c, a);
+      return b >= c ? b : Math.min(c, a);
     }
 
-    return a > c ? a : java.lang.Math.min(c, b);
+    return a > c ? a : Math.min(c, b);
   }
 
   public static int sum(final int continuousNumberCount) {
