@@ -2,8 +2,7 @@ package xyz.dddd.algorithm.lesson.basis;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class ArrayTests {
 
@@ -27,4 +26,43 @@ public class ArrayTests {
     assertArrayEquals(expected, actual);
   }
 
+  @Test
+  public void givenArrayWhenSumOfThen() {
+    int[] array = {1, 2, 3, 4, 5};
+
+    int actual = Array.sumOf(array);
+
+    int expected = 15;
+    assertEquals(expected, actual);
+  }
+
+  @Test
+  public void givenArrayWhenEqualsThen() {
+    int[] array = {1, 2, 3, 4, 5};
+    int[] compareTarget = {1, 2, 3, 4, 5};
+
+    boolean actual = Array.equals(array, compareTarget);
+
+    assertTrue(actual);
+  }
+
+  @Test
+  public void givenArrayWhenCopyThen() {
+    int[] array = {1, 2, 3, 4, 5};
+
+    int[] actual = Array.copy(array, new int[4]);
+
+    int[] expected = {1, 2, 3, 4};
+    assertArrayEquals(expected, actual);
+  }
+
+  @Test
+  public void givenArrayWhenReverseCopyThen() {
+    int[] array = {1, 2, 3, 4, 5};
+
+    int[] actual = Array.reverseCopy(array, new int[6]);
+
+    int[] expected = {5, 4, 3, 2, 1, 0};
+    assertArrayEquals(expected, actual);
+  }
 }
