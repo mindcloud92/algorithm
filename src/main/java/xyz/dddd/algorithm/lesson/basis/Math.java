@@ -1,5 +1,6 @@
 package xyz.dddd.algorithm.lesson.basis;
 
+@SuppressWarnings("ManualMinMaxCalculation")
 public class Math {
 
   public Math() {
@@ -14,7 +15,6 @@ public class Math {
     return max(max(a, b), c);
   }
 
-  @SuppressWarnings("ManualMinMaxCalculation")
   public static int max(final int a, final int b) {
     return a > b ? a : b;
   }
@@ -27,7 +27,6 @@ public class Math {
     return min(min(a, b), c);
   }
 
-  @SuppressWarnings("ManualMinMaxCalculation")
   public static int min(final int a, final int b) {
     return a > b ? b : a;
   }
