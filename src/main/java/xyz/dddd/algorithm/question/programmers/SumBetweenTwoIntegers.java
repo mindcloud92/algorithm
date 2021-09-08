@@ -2,6 +2,7 @@ package xyz.dddd.algorithm.question.programmers;
 
 /**
  * <h3><a href="https://programmers.co.kr/learn/courses/30/lessons/12912">"두 정수의 합"</a></h1>
+ * <p>· 문제 - 정수 a와 b 사이에 속한 모든 정의 합 구하기</p>
  * <p>· 조건</p>
  * <ol>
  *   <li>a와 b가 같은 경우 아무 값이나 반환</li>
