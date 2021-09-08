@@ -42,11 +42,7 @@ public class Math {
     return a > c ? a : Math.min(c, b);
   }
 
-  public static int sum(final int continuousNumberCount) {
-    return sum(1, continuousNumberCount);
-  }
-
-  public static int sum(final int start, final int end) {
+  public static int sumByRangeOf(final int start, final int end) {
     int sum = 0;
 
     for (int i = start; i <= end; i++) {
@@ -59,12 +55,12 @@ public class Math {
   /**
    * <a href="https://sgcomputer.tistory.com/272">@link 가우스 덧셈</a>
    */
-  public static int sumByGauss(final int continuousNumberCount) {
-    int sum = (1 + continuousNumberCount) * (continuousNumberCount / 2);
+  public static int sumGaussByRangeOf(final int start, final int end) {
+    int sum = (start + end) * (end / 2);
 
-    boolean isEven = continuousNumberCount % 2 == 0;
-    if (!isEven) {
-      sum += (1 + continuousNumberCount) / 2;
+    boolean isOdd = end % 2 > 0;
+    if (isOdd) {
+      sum += (start + end) / 2;
     }
 
     return sum;

@@ -10,7 +10,7 @@ public class MathTests {
   public void givenContinuousNumberCountWhenSumByGaussThen() {
     int continuousNumberCount = 7;
 
-    int actual = Math.sumByGauss(continuousNumberCount);
+    int actual = Math.sumGaussByRangeOf(1, continuousNumberCount);
 
     int expected = 28;
     assertEquals(expected, actual);
@@ -21,7 +21,7 @@ public class MathTests {
     int start = 2;
     int end = 10;
 
-    int actual = Math.sum(start, end);
+    int actual = Math.sumByRangeOf(start, end);
 
     int expected = 54;
     assertEquals(expected, actual);
@@ -31,7 +31,7 @@ public class MathTests {
   public void givenContinuousNumberCountWhenSumThen() {
     int continuousNumberCount = 7;
 
-    int actual = Math.sum(continuousNumberCount);
+    int actual = Math.sumByRangeOf(1, continuousNumberCount);
 
     int expected = 28;
     assertEquals(expected, actual);
