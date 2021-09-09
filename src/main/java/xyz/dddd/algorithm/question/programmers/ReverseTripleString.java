@@ -12,7 +12,7 @@ public class ReverseTripleString {
 
   private static final int RADIX = 3;
 
-  public int solution(int decimal) {
+  public int solve(int decimal) {
     StringBuilder reverseTripleString = new StringBuilder();
     while (decimal > 0) {
       reverseTripleString.append(decimal % RADIX);

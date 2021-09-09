@@ -19,7 +19,7 @@ public class ReverseTripleStringTests {
   public void givenDecimalWhenSolveThen() {
     int decimal = 45;
 
-    int actual = reverseTripleString.solution(decimal);
+    int actual = reverseTripleString.solve(decimal);
 
     int expected = 7;
     assertEquals(expected, actual);
