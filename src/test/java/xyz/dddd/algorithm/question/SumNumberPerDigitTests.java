@@ -6,7 +6,7 @@ import xyz.dddd.algorithm.question.programmers.SumNumberPerDigit;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class AddDigitTests {
+public class SumNumberPerDigitTests {
 
   private static SumNumberPerDigit sumNumberPerDigit;
 
