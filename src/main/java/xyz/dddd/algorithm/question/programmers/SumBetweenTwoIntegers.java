@@ -1,7 +1,7 @@
 package xyz.dddd.algorithm.question.programmers;
 
 /**
- * <h3><a href="https://programmers.co.kr/learn/courses/30/lessons/12912">"두 정수의 합"</a></h1>
+ * <h3><a href="https://programmers.co.kr/learn/courses/30/lessons/12912">"두 정수 사이의 합"</a></h1>
  * <p>· 문제 - 정수 a와 b 사이에 속한 모든 정의 합 반환</p>
  * <p>· 조건</p>
  * <ol>
