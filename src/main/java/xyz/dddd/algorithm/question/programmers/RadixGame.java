@@ -1,7 +1,7 @@
 package xyz.dddd.algorithm.question.programmers;
 
 /**
- * <h3><a href="https://programmers.co.kr/learn/courses/30/lessons/12932">"[3차] n진수 게임"</a></h1>
+ * <h3><a href="https://programmers.co.kr/learn/courses/30/lessons/17687">"[3차] n진수 게임"</a></h1>
  * <p>· 문제: 10진수를 n진법으로 변환한 문자열을 게임 참가자 m명이 번갈아 한글자씩 이야기 하는 게임에서 튜브가 말한 문자들을 이어서 반환</p>
  * <p>· 조건</p>
  * <ol>
