@@ -11,7 +11,7 @@ public class DigitConverterTests {
     int decimal = 4768;
     int radix = 16;
 
-    int actual = DigitConverter.calculateLength(decimal, radix, new char[4]);
+    int actual = DigitConverter.calculateLength(decimal, radix, new char[5]);
 
     int expected = 4;
     assertEquals(expected, actual);

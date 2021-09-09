@@ -15,15 +15,20 @@ public class DigitConverter {
   public static int calculateLength(final int decimal, final int radix, char[] digits) {
     int source = decimal;
 
-    int index = digits.length - 1;
+    int length = 0;
     while (source > 0) {
       int remain = source % radix;
 
-      digits[index--] = (char) (remain + (remain >= DECIMAL_START_VALUE ? A_CHARACTER_INT_VALUE : ZERO_CHARACTER_INT_VALUE));
+      digits[length++] = convertToChar(remain);
       source /= radix;
     }
 
-    return digits.length - index - 1;
+    return length;
   }
 
+  private static char convertToChar(final int remain) {
+    int correspondASCIIValue = remain >= DECIMAL_START_VALUE ? A_CHARACTER_INT_VALUE : ZERO_CHARACTER_INT_VALUE;
+
+    return (char) (remain + correspondASCIIValue);
+  }
 }
