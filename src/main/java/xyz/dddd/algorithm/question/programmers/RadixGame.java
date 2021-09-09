@@ -48,15 +48,15 @@ public class RadixGame {
 
     int quotient = decimal;
 
-    String digit = "";
+    StringBuilder digit = new StringBuilder();
     while (quotient > 0) {
       int remain = quotient % radix;
-      digit = convertToRadixChar(remain) + digit;
+      digit.insert(0, convertToRadixChar(remain));
 
       quotient /= radix;
     }
 
-    return digit;
+    return digit.toString();
   }
 
   private char convertToRadixChar(final int number) {
