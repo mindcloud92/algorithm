@@ -1,4 +1,4 @@
-package xyz.dddd.algorithm.question.programmers;
+package xyz.dddd.algorithm.question;
 
 /**
  * <h3><a href="https://programmers.co.kr/learn/courses/30/lessons/68935">"3진법 뒤집기"</a></h1>

@@ -1,4 +1,4 @@
-package xyz.dddd.algorithm.question.programmers;
+package xyz.dddd.algorithm.question;
 
 import java.util.Scanner;
 

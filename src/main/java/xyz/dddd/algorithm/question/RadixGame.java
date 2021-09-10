@@ -1,4 +1,4 @@
-package xyz.dddd.algorithm.question.programmers;
+package xyz.dddd.algorithm.question;
 
 /**
  * <h3><a href="https://programmers.co.kr/learn/courses/30/lessons/17687">"[3차] n진수 게임"</a></h1>
