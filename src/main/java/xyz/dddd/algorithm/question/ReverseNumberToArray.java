@@ -12,8 +12,8 @@ public class ReverseNumberToArray {
 
   private static final int ZERO_CHARACTER_INT_VALUE = 48;
 
-  public int[] solve(final long number) {
-    String str = number + "";
+  public int[] solve(final long n) {
+    String str = n + "";
 
     int[] result = new int[str.length()];
     for (int i = 0; i < result.length; i++) {

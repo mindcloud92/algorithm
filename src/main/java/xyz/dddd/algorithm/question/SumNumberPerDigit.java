@@ -12,11 +12,11 @@ public class SumNumberPerDigit {
 
   private static final int DECIMAL_RADIX = 10;
 
-  public int solve(int number) {
+  public int solve(int n) {
     int result = 0;
-    while (number > 0) {
-      result += number % DECIMAL_RADIX;
-      number /= DECIMAL_RADIX;
+    while (n > 0) {
+      result += n % DECIMAL_RADIX;
+      n /= DECIMAL_RADIX;
     }
 
     return result;

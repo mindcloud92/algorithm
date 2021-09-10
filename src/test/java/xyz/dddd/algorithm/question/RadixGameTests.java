@@ -15,7 +15,7 @@ public class RadixGameTests {
   }
 
   @Test
-  public void givenWhenSolveThen() {
+  public void givenParametersWhenSolveThen() {
     int n = 16;
     int t = 16;
     int m = 2;
