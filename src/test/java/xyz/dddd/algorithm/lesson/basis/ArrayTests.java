@@ -65,4 +65,26 @@ public class ArrayTests {
     int[] expected = {5, 4, 3, 2, 1, 0};
     assertArrayEquals(expected, actual);
   }
+
+  @Test
+  public void givenArrayAndExistsKeyWhenFindIndexBySentinelThen() {
+    int[] array = {1, 2, 3, 4, 5};
+    int key = 5;
+
+    int actual = Array.findIndexBySentinel(array, key);
+
+    int expected = 4;
+    assertEquals(expected, actual);
+  }
+
+  @Test
+  public void givenArrayAndEmptyKeyWhenFindIndexBySentinelThen() {
+    int[] array = {1, 2, 3, 4, 5};
+    int key = 6;
+
+    int actual = Array.findIndexBySentinel(array, key);
+
+    int expected = -1;
+    assertEquals(expected, actual);
+  }
 }

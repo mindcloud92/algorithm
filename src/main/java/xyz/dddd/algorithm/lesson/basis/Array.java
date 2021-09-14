@@ -6,6 +6,21 @@ public class Array {
     throw new UnsupportedOperationException();
   }
 
+  public static int findIndexBySentinel(final int[] arr, final int key) {
+    int[] clonedArray = Array.copy(arr, new int[arr.length + 1]);
+    clonedArray[arr.length] = key;
+
+    int index = 0;
+    for (int i = 0; i < clonedArray.length; i++) {
+      if (clonedArray[i] == key) {
+        index = i;
+        break;
+      }
+    }
+
+    return index == clonedArray.length - 1 ? -1 : index;
+  }
+
   public static int maxOf(final int[] array) {
     int max = array[0];
     for (int i = 1; i < array.length; i++) {
