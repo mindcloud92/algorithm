@@ -67,22 +67,45 @@ public class ArrayTests {
   }
 
   @Test
-  public void givenArrayAndExistsKeyWhenFindIndexBySentinelThen() {
+  public void givenArrayAndExistsKeyWhenSentinelSearchThen() {
     int[] array = {1, 2, 3, 4, 5};
     int key = 5;
 
-    int actual = Array.findIndexBySentinel(array, key);
+    int actual = Array.sentinelSearch(array, key);
 
     int expected = 4;
     assertEquals(expected, actual);
   }
 
   @Test
-  public void givenArrayAndEmptyKeyWhenFindIndexBySentinelThen() {
+  public void givenArrayAndEmptyKeyWhenSentinelSearchThen() {
     int[] array = {1, 2, 3, 4, 5};
     int key = 6;
 
-    int actual = Array.findIndexBySentinel(array, key);
+    int actual = Array.sentinelSearch(array, key);
+
+    int expected = -1;
+    assertEquals(expected, actual);
+  }
+
+
+  @Test
+  public void givenArrayAndExistsKeyWhenBinarySearchThen() {
+    int[] array = {1, 2, 3, 4, 5};
+    int key = 5;
+
+    int actual = Array.sentinelSearch(array, key);
+
+    int expected = 4;
+    assertEquals(expected, actual);
+  }
+
+  @Test
+  public void givenArrayAndEmptyKeyWhenBinarySearchThen() {
+    int[] array = {1, 2, 3, 4, 5};
+    int key = 6;
+
+    int actual = Array.sentinelSearch(array, key);
 
     int expected = -1;
     assertEquals(expected, actual);

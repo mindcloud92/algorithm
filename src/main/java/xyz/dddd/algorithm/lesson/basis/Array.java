@@ -6,7 +6,29 @@ public class Array {
     throw new UnsupportedOperationException();
   }
 
-  public static int findIndexBySentinel(final int[] arr, final int key) {
+  public static int binarySearch(final int[] arr, final int key) {
+    int startIndex = 0;
+    int endIndex = arr.length - 1;
+
+    while (startIndex < endIndex) {
+      int centerIndex = (startIndex + endIndex) / 2;
+      int criteriaValue = arr[centerIndex];
+
+      if (criteriaValue == key) {
+        return centerIndex;
+      }
+
+      if (criteriaValue > key) {
+        endIndex = centerIndex - 1;
+      } else {
+        startIndex = centerIndex + 1;
+      }
+    }
+
+    return -1;
+  }
+
+  public static int sentinelSearch(final int[] arr, final int key) {
     int[] clonedArray = Array.copy(arr, new int[arr.length + 1]);
     clonedArray[arr.length] = key;
 
