@@ -94,7 +94,7 @@ public class ArrayTests {
     int[] array = {1, 2, 3, 4, 5};
     int key = 5;
 
-    int actual = Array.sentinelSearch(array, key);
+    int actual = Array.binarySearch(array, key);
 
     int expected = 4;
     assertEquals(expected, actual);
@@ -105,7 +105,7 @@ public class ArrayTests {
     int[] array = {1, 2, 3, 4, 5};
     int key = 6;
 
-    int actual = Array.sentinelSearch(array, key);
+    int actual = Array.binarySearch(array, key);
 
     int expected = -1;
     assertEquals(expected, actual);

@@ -10,10 +10,10 @@ public class Array {
     int startIndex = 0;
     int endIndex = arr.length - 1;
 
-    while (startIndex < endIndex) {
+    while (startIndex <= endIndex) {
       int centerIndex = (startIndex + endIndex) / 2;
-      int criteriaValue = arr[centerIndex];
 
+      int criteriaValue = arr[centerIndex];
       if (criteriaValue == key) {
         return centerIndex;
       }
