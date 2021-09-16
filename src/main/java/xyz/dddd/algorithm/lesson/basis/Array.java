@@ -6,6 +6,16 @@ public class Array {
     throw new UnsupportedOperationException();
   }
 
+  public static int linearSearch(final int[] arr, final int key) {
+    for (int i = 0; i < arr.length; i++) {
+      if (arr[i] == key) {
+        return i;
+      }
+    }
+
+    return -1;
+  }
+
   public static int binarySearch(final int[] arr, final int key) {
     int startIndex = 0;
     int endIndex = arr.length - 1;

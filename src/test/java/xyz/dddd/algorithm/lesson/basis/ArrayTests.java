@@ -1,18 +1,27 @@
 package xyz.dddd.algorithm.lesson.basis;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 public class ArrayTests {
 
+  private static int[] DEFAULT_SORTED_ARRAY;
+
+  @BeforeAll
+  public static void setUp() {
+    DEFAULT_SORTED_ARRAY = new int[1000];
+    for (int i = 0; i < DEFAULT_SORTED_ARRAY.length; i++) {
+      DEFAULT_SORTED_ARRAY[i] = i + 1;
+    }
+  }
+
   @Test
   public void givenArrayWhenMaxOfThen() {
-    int[] array = {1, 2, 3, 4, 5};
+    int actual = Array.maxOf(DEFAULT_SORTED_ARRAY);
 
-    int actual = Array.maxOf(array);
-
-    int expected = 5;
+    int expected = DEFAULT_SORTED_ARRAY[DEFAULT_SORTED_ARRAY.length - 1];
     assertEquals(expected, actual);
   }
 
@@ -68,10 +77,9 @@ public class ArrayTests {
 
   @Test
   public void givenArrayAndExistsKeyWhenSentinelSearchThen() {
-    int[] array = {1, 2, 3, 4, 5};
     int key = 5;
 
-    int actual = Array.sentinelSearch(array, key);
+    int actual = Array.sentinelSearch(DEFAULT_SORTED_ARRAY, key);
 
     int expected = 4;
     assertEquals(expected, actual);
@@ -79,10 +87,9 @@ public class ArrayTests {
 
   @Test
   public void givenArrayAndEmptyKeyWhenSentinelSearchThen() {
-    int[] array = {1, 2, 3, 4, 5};
-    int key = 6;
+    int key = DEFAULT_SORTED_ARRAY.length + 1;
 
-    int actual = Array.sentinelSearch(array, key);
+    int actual = Array.sentinelSearch(DEFAULT_SORTED_ARRAY, key);
 
     int expected = -1;
     assertEquals(expected, actual);
@@ -91,10 +98,9 @@ public class ArrayTests {
 
   @Test
   public void givenArrayAndExistsKeyWhenBinarySearchThen() {
-    int[] array = {1, 2, 3, 4, 5};
     int key = 5;
 
-    int actual = Array.binarySearch(array, key);
+    int actual = Array.binarySearch(DEFAULT_SORTED_ARRAY, key);
 
     int expected = 4;
     assertEquals(expected, actual);
@@ -102,10 +108,29 @@ public class ArrayTests {
 
   @Test
   public void givenArrayAndEmptyKeyWhenBinarySearchThen() {
-    int[] array = {1, 2, 3, 4, 5};
-    int key = 6;
+    int key = DEFAULT_SORTED_ARRAY.length + 1;
 
-    int actual = Array.binarySearch(array, key);
+    int actual = Array.binarySearch(DEFAULT_SORTED_ARRAY, key);
+
+    int expected = -1;
+    assertEquals(expected, actual);
+  }
+
+  @Test
+  public void givenArrayAndExistsKeyWhenLinearSearchThen() {
+    int key = 5;
+
+    int actual = Array.linearSearch(DEFAULT_SORTED_ARRAY, key);
+
+    int expected = 4;
+    assertEquals(expected, actual);
+  }
+
+  @Test
+  public void givenArrayAndEmptyKeyWhenLinearSearchThen() {
+    int key = DEFAULT_SORTED_ARRAY.length + 1;
+
+    int actual = Array.linearSearch(DEFAULT_SORTED_ARRAY, key);
 
     int expected = -1;
     assertEquals(expected, actual);
