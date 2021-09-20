@@ -43,14 +43,9 @@ public class Array {
     clonedArray[arr.length] = key;
 
     int index = 0;
-    for (int i = 0; i < clonedArray.length; i++) {
-      if (clonedArray[i] == key) {
-        index = i;
-        break;
-      }
-    }
+    for (index = 0; clonedArray[index] != key; index++) ;
 
-    return index == clonedArray.length - 1 ? -1 : index;
+    return index == arr.length ? -1 : index;
   }
 
   public static int maxOf(final int[] array) {
