@@ -8,7 +8,7 @@ package xyz.dddd.algorithm.question;
  *   <li>n의 범위: 1 이상 100,000,000 이하인 자연수</li>
  * </ol>
  */
-public class ReverseTripleString {
+public class ReverseThreeDigit {
 
   private static final int RADIX = 3;
 

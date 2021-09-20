@@ -5,22 +5,22 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class PrimeNumberTests {
+public class ReverseThreeDigitTests {
 
-  private static PrimeNumberFinder primeNumberFinder;
+  private static ReverseThreeDigit reverseThreeDigit;
 
   @BeforeAll
   public static void setUp() {
-    primeNumberFinder = new PrimeNumberFinder();
+    reverseThreeDigit = new ReverseThreeDigit();
   }
 
   @Test
-  public void givenEndNumberWhenSolveThen() {
-    int end = 10;
+  public void givenDecimalWhenSolveThen() {
+    int decimal = 45;
 
-    int actual = primeNumberFinder.solve(end);
+    int actual = reverseThreeDigit.solve(decimal);
 
-    int expected = 4;
+    int expected = 7;
     assertEquals(expected, actual);
   }
 

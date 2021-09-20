@@ -9,7 +9,7 @@ package xyz.dddd.algorithm.question;
  *   <li>n의 범위: 2이상 1000000이하의 자연수</li>
  * </ol>
  */
-public class PrimeNumberFinder {
+public class FindPrimeNumber {
 
   private static final int MIN_PRIME_NUMBER = 2;
 

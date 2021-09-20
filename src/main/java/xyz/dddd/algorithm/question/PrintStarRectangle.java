@@ -10,7 +10,7 @@ import java.util.Scanner;
  *   <li>scanner로 두 개의 정수 n과 m을 입력</li>
  * </ol>
  */
-public class StarRectanglePrinter {
+public class PrintStarRectangle {
 
   private static final String STAR_STRING = "*";
 

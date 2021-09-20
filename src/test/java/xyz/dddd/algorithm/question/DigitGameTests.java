@@ -5,13 +5,13 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class RadixGameTests {
+public class DigitGameTests {
 
-  private static RadixGame radixGame;
+  private static DigitGame digitGame;
 
   @BeforeAll
   public static void setUp() {
-    radixGame = new RadixGame();
+    digitGame = new DigitGame();
   }
 
   @Test
@@ -21,7 +21,7 @@ public class RadixGameTests {
     int m = 2;
     int p = 1;
 
-    String actual = radixGame.solve(n, t, m, p);
+    String actual = digitGame.solve(n, t, m, p);
 
     String expected = "02468ACE11111111";
     assertEquals(expected, actual);

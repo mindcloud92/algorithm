@@ -12,7 +12,7 @@ package xyz.dddd.algorithm.question;
  *   <li>튜브가 말해야 하는 숫자 t개를 공백 없이 차례대로 나타내야하며 10~15는 각각 대문자 A~F로 표현</li>
  * </ol>
  */
-public class RadixGame {
+public class DigitGame {
 
   private static final int A_ASCII_INT_VALUE = 55;
 
