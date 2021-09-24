@@ -15,7 +15,7 @@ public class DigitGameTests {
   }
 
   @Test
-  public void givenParametersWhenSolveThen() {
+  public void given_RequiredParameters_when_StartGame_then_TubeSaidNDigitString() {
     int n = 16;
     int t = 16;
     int m = 2;

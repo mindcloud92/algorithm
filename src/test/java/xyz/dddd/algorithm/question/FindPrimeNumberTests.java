@@ -15,7 +15,7 @@ public class FindPrimeNumberTests {
   }
 
   @Test
-  public void givenEndNumberWhenSolveThen() {
+  public void given_EndNumber_when_FindPrimeNumberBetween1AndEndNumber_then_PrimeNumberTotalCount() {
     int end = 10;
 
     int actual = findPrimeNumber.solve(end);
