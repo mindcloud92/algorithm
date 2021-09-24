@@ -5,20 +5,20 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ReverseThreeDigitTests {
+public class ReverseByThreeDigitTests {
 
-  private static ReverseThreeDigit reverseThreeDigit;
+  private static ReverseByThreeDigit reverseByThreeDigit;
 
   @BeforeAll
   public static void setUp() {
-    reverseThreeDigit = new ReverseThreeDigit();
+    reverseByThreeDigit = new ReverseByThreeDigit();
   }
 
   @Test
-  public void givenDecimalWhenSolveThen() {
+  public void given_DecimalNumber_when_ReverseByThreeDigit_then_CorrectResult() {
     int decimal = 45;
 
-    int actual = reverseThreeDigit.solve(decimal);
+    int actual = reverseByThreeDigit.solve(decimal);
 
     int expected = 7;
     assertEquals(expected, actual);
