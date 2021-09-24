@@ -15,7 +15,7 @@ public class SumBetweenTwoIntegersTests {
   }
 
   @Test
-  public void givenMinAndMaxWhenSolveThen() {
+  public void given_MinAndMax_when_SumBetween_then_CorrectSum() {
     int a = 3;
     int b = 5;
 
@@ -26,7 +26,7 @@ public class SumBetweenTwoIntegersTests {
   }
 
   @Test
-  public void givenReverseMinAndMaxWhenSolveThen() {
+  public void given_MaxAndMin_when_SumBetween_then_CorrectSum() {
     int a = 5;
     int b = 3;
 
@@ -37,7 +37,7 @@ public class SumBetweenTwoIntegersTests {
   }
 
   @Test
-  public void givenEqualsTwoIntegerWhenSolveThen() {
+  public void given_EqualsTwoIntegers_when_SumBetween_then_CorrectSum() {
     int a = 3;
     int b = 3;
 
@@ -48,7 +48,7 @@ public class SumBetweenTwoIntegersTests {
   }
 
   @Test
-  public void givenMinAndMaxWhenSolveByGaussThen() {
+  public void given_MinAndMax_when_SumBetweenByGauss_then_CorrectSum() {
     int a = 3;
     int b = 5;
 
@@ -59,7 +59,7 @@ public class SumBetweenTwoIntegersTests {
   }
 
   @Test
-  public void givenReverseMinAndMaxWhenSolveByGaussThen() {
+  public void given_MaxAndMin_when_SumBetweenByGauss_then_CorrectSum() {
     int a = 5;
     int b = 3;
 
@@ -70,7 +70,7 @@ public class SumBetweenTwoIntegersTests {
   }
 
   @Test
-  public void givenEqualsTwoIntegerWhenSolveByGaussThen() {
+  public void given_EqualsTwoIntegers_when_SumBetweenByGauss_then_CorrectSum() {
     int a = 3;
     int b = 3;
 
