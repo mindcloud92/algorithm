@@ -15,7 +15,7 @@ public class SumNumberPerDigitTests {
   }
 
   @Test
-  public void given_ThreeDigitNumber_when_SumNumberPerDigit_then_CorrectSum() {
+  public void given_ThreeDigitNumber_when_SumNumberPerDigit_then_Sum() {
     int number = 987;
 
     int actual = sumNumberPerDigit.solve(number);

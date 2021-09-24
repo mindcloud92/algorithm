@@ -15,7 +15,7 @@ public class ReverseNumberToArrayTests {
   }
 
   @Test
-  public void givenNumberThenSolveThen() {
+  public void given_DecimalNumber_when_ReverseNumberToArray_then_Array() {
     long number = 12345;
 
     int[] actual = reverseNumberToArray.solve(number);

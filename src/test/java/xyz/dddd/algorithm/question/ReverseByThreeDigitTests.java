@@ -15,7 +15,7 @@ public class ReverseByThreeDigitTests {
   }
 
   @Test
-  public void given_DecimalNumber_when_ReverseByThreeDigit_then_CorrectResult() {
+  public void given_DecimalNumber_when_ReverseByThreeDigitToDecimalNumber_then_DecimalNumber() {
     int decimal = 45;
 
     int actual = reverseByThreeDigit.solve(decimal);

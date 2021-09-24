@@ -10,7 +10,7 @@ package xyz.dddd.algorithm.question;
  *   <li>a와 b의 대소관계는 정해져있지 않음</li>
  * </ol>
  */
-public class SumBetweenTwoIntegers {
+public class SumOfBetweenTwoIntegers {
 
   public long solve(final int a, final int b) {
     return a > b ? sumByRangeOf(b, a) : sumByRangeOf(a, b);
