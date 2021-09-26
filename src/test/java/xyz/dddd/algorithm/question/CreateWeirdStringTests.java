@@ -7,11 +7,11 @@ import org.junit.jupiter.api.Test;
 
 public class CreateWeirdStringTests {
 
-  private static CreateWeirdString createWeirdString;
+  private static ConvertToWeirdString createWeirdString;
 
   @BeforeAll
   public static void setUp() {
-    createWeirdString = new CreateWeirdString();
+    createWeirdString = new ConvertToWeirdString();
   }
 
   @Test

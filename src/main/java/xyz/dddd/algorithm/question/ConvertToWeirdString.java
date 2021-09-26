@@ -9,7 +9,7 @@ package xyz.dddd.algorithm.question;
  *   <li>첫 번째 글자는 0번째 인덱스로 보아 짝수번째 알파벳으로 처리</li>
  * </ol>
  */
-public class CreateWeirdString {
+public class ConvertToWeirdString {
 
   private static final int ALPHABET_TOTAL_COUNT = 32;
 
