@@ -7,7 +7,7 @@ package xyz.dddd.algorithm.question;
  * <p>· 조건</p>
  * <ol>
  *   <li>absolutes의 길이: 1 이상 1,000 이하</li>
- *   <li>absolutes의 요소: 각각 1 이상 1,000 이하</li>
+ *   <li>absolutes의 원소: 각각 1 이상 1,000 이하</li>
  *   <li>signs의 길이 == absolutes의 길이</li>
  *   <li>signs[i] 가 참이면 absolutes[i] 의 실제 정수가 양수, 그렇지 않으면 음수</li>
  * </ol>
