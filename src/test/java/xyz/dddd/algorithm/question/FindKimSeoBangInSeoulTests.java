@@ -15,7 +15,7 @@ public class FindKimSeoBangInSeoulTests {
   }
 
   @Test
-  public void given_SeoulPeopelArray_when_FindKimSeoBangIndex_then_FormattedKimSeoBangIndexString() {
+  public void given_SeoulPeopleArray_when_FindKimSeoBangIndex_then_FormattedKimSeoBangIndexString() {
     String[] seoul = {"Jane", "Kim"};
 
     String actual = findKimSeoBangInSeoul.solve(seoul);
