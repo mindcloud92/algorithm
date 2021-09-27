@@ -15,7 +15,7 @@ public class ConvertToJadenCaseTests {
   }
 
   @Test
-  public void given() {
+  public void given_String_when_ConvertToJadenCase_then_JadenCaseString() {
     String s = "3people unFollowed me";
 
     String actual = convertToJadenCase.solve(s);

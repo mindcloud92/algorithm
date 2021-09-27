@@ -15,7 +15,7 @@ public class MinAndMaxTests {
   }
 
   @Test
-  public void given() {
+  public void given_MultipleNumberConcatenatedString_when_FindMinAndMax_then_MinAndMaxConcatenatedString() {
     String s = "1 2 3 4";
 
     String actual = minAndMax.solve(s);
