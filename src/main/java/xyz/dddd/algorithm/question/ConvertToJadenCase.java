@@ -8,7 +8,7 @@ package xyz.dddd.algorithm.question;
  * <ol>
  *   <li>JadenCase = 모든 단어의 첫 문자가 대문자이고, 그 외의 알파벳은 소문자인 문자열</li>
  *   <li>s의 길이: 1 이상</li>
- *   <li>s의 구성: 알파벳 + 공백문자(" ")</li>
+ *   <li>s의 구성: 알파벳, 공백문자(" ")</li>
  *   <li>첫 문자가 영문이 아닐때에는 이어지는 영문은 소문자로</li>
  * </ol>
  */

@@ -8,7 +8,7 @@ import java.util.Map;
  * <p>· 조건</p>
  * <ol>
  *   <li>문자열 s의 길이 : 50 이하의 자연수</li>
- *   <li>문자열 s는 알파벳으로만 구성</li>
+ *   <li>s의 구성: 알파벳</li>
  * </ol>
  */
 public class CountPAndY {
