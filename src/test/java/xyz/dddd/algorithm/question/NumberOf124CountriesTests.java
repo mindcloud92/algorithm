@@ -15,7 +15,7 @@ public class NumberOf124CountriesTests {
   }
 
   @Test
-  public void given_when_then() {
+  public void given_DecimalNumber_when_To124CountriesNumber_then_124CountriesNumber() {
     int n = 10;
 
     String actual = numberOf124Countries.solve(n);
