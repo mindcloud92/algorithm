@@ -4,8 +4,8 @@ plugins {
     id 'java'
 }
 
-group = 'xyz.dddd'
 version = '0.0.1-SNAPSHOT'
+group = 'xyz.superdev'
 sourceCompatibility = '11'
 
 configurations {
