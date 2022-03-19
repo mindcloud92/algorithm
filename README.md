@@ -1,25 +1,35 @@
-# solution.algorithm
-
-![spring boot v2.5.3](https://img.shields.io/badge/spring%20boot-v2.5.3-brightgreen?style=flat-square) &nbsp;
-![junit v5.7.2](https://img.shields.io/badge/junit-v5.7.2-yellow?style=flat-square)
 
 <br/>
-This application consists of an Algorithm problem-solving  and testing it.
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/3929320/159118346-40d66e8d-5e24-431d-817c-3887b6f00401.png" alt="solution.algorithm" height="180px"/>
+</div>
 
-<br/>
+
+<h1 align="center">solution.algorithm</h1>
+
+<div align="center">
+    <img src="https://img.shields.io/badge/spring%20boot-v2.5.3-brightgreen?style=flat-square" alt="spring boot v2.5.3" /> &nbsp;
+    <img src="https://img.shields.io/badge/junit-v5.7.2-yellow?style=flat-square" alt="junit v5.7.2" />
+</div>
 <br/>
 
-### Question Provider
+### Key Features
+- Algorithm problem-solving
+- Algorithm problem-solving Unit Tests
+
+**Question Provider**
 - [Programmers](https://programmers.co.kr/)
 
+
+
 <br/>
 
-### Test Usage
-1. run `test` gradle task
+### Runnig Tests
+Using the gradle task
+
 ```
+# run `test` gradle task
 $ ./gradlew test
-```
-<br/>
 
-2. go to test result url
-- test result url: *file:///${project root path}/build/reports/tests/test/index.html*
+# go to test result url ⇢ file:///${project root path}/build/reports/tests/test/index.html
+```
