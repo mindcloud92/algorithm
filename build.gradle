@@ -1,12 +1,16 @@
 plugins {
-    id 'org.springframework.boot' version '2.5.3'
-    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
-    id 'java'
+    id "java"
+    id "org.springframework.boot" version "3.4.1"
+    id "io.spring.dependency-management" version "1.0.11.RELEASE"
 }
 
-version = '0.0.1-SNAPSHOT'
-group = 'xyz.superdev'
-sourceCompatibility = '11'
+version = "0.0.1-SNAPSHOT"
+group = "xyz.superdev"
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
 
 configurations {
     compileOnly {
@@ -19,10 +23,11 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter'
-    compileOnly 'org.projectlombok:lombok'
-    annotationProcessor 'org.projectlombok:lombok'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation "org.springframework.boot:spring-boot-starter"
+
+    compileOnly "org.projectlombok:lombok"
+    annotationProcessor "org.projectlombok:lombok"
+    testImplementation "org.springframework.boot:spring-boot-starter-test"
 }
 
 test {
