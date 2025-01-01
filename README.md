@@ -7,8 +7,6 @@
 <br/>
 
 ### Runnig Tests
-Using the gradle task
-
 ```shell
 # run `test` gradle task
 $ ./gradlew test
